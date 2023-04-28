@@ -1,7 +1,11 @@
 [versions]
+plugin-android = "8.2.0-alpha01"
+plugin-kotlin = "1.8.20"
 
 [libraries]
 
 [plugins]
+android-application = { id = "com.android.application", version.ref = "plugin-android" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugin-kotlin" }
 
 [bundles]
