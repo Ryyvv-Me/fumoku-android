@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.consumeWindowInsets
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,6 +25,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import me.ryyvv.fumoku.navigation.HomeScreen
+import me.ryyvv.fumoku.navigation.Screen
+import me.ryyvv.fumoku.navigation.SettingsScreen
 import me.ryyvv.fumoku.ui.theme.FumokuTheme
 
 @OptIn(
@@ -45,17 +47,15 @@ class MainActivity : ComponentActivity() {
                     NavHost(
                         navController = navController,
                         modifier = Modifier.consumeWindowInsets(innerPadding),
-                        startDestination = "home",
+                        startDestination = Screen.Home.route,
                     ) {
 
-                        composable("home") {
+                        composable(Screen.Home.route) {
+                            HomeScreen()
+                        }
 
-                            LazyColumn(
-                                contentPadding = innerPadding,
-                            ) {
-
-                            }
-
+                        composable(Screen.Settings.route) {
+                            SettingsScreen()
                         }
 
                     }
