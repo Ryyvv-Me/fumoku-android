@@ -69,8 +69,9 @@ dependencies {
 
     implementation(libs.androidx.compose.material3)
 
-    // Integration with activities
+    // Integration
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.navigation.compose)
 
     // Android Studio Preview support
     implementation(libs.androidx.compose.ui.tooling.preview)
