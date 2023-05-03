@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -88,9 +89,7 @@ fun BottomBar(
         destinations.forEach { destination ->
             val selected = navHostController.currentBackStackEntryAsState().value?.destination
                 // Check if it's in hierarchy
-                ?.hierarchy?.any {
-                    it.route?.contains(destination.name, true) ?: false
-                } ?: false
+                .isInHierarchy(destination)
             NavigationBarItem(
                 selected = selected,
                 onClick = {
@@ -131,3 +130,8 @@ fun BottomBar(
         }
     }
 }
+
+private fun NavDestination?.isInHierarchy(destination: TopLevelDestination): Boolean =
+    this?.hierarchy?.any {
+        it.route?.contains(destination.name, true) ?: false
+    } ?: false
