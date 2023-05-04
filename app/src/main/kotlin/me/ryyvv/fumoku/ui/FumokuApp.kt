@@ -1,6 +1,11 @@
 package me.ryyvv.fumoku.ui
 
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.consumeWindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -21,12 +26,16 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navOptions
 import me.ryyvv.fumoku.R
+import me.ryyvv.fumoku.navigation.FumokuNavHost
 import me.ryyvv.fumoku.navigation.HomeScreen
 import me.ryyvv.fumoku.navigation.Screen
 import me.ryyvv.fumoku.navigation.SettingsScreen
 import me.ryyvv.fumoku.navigation.TopLevelDestination
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(
+    ExperimentalMaterial3Api::class,
+    ExperimentalLayoutApi::class,
+)
 @Composable
 fun FumokuApp(
     appState: FumokuAppState = rememberFumokuAppState()
@@ -37,20 +46,13 @@ fun FumokuApp(
         topBar = { TopBar() },
         bottomBar = { BottomBar(navController) },
     ) { innerPadding ->
-        NavHost(
-            navController = navController,
-            modifier = Modifier.padding(innerPadding),
-            startDestination = Screen.Home.route,
+        Row(
+            Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .consumeWindowInsets(innerPadding)
         ) {
-
-            composable(Screen.Home.route) {
-                HomeScreen()
-            }
-
-            composable(Screen.Settings.route) {
-                SettingsScreen()
-            }
-
+            FumokuNavHost(appState)
         }
     }
 }
