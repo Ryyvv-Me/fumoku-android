@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -21,15 +20,11 @@ import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navOptions
 import me.ryyvv.fumoku.R
 import me.ryyvv.fumoku.navigation.FumokuNavHost
-import me.ryyvv.fumoku.navigation.HomeScreen
 import me.ryyvv.fumoku.navigation.Screen
-import me.ryyvv.fumoku.navigation.SettingsScreen
 import me.ryyvv.fumoku.navigation.TopLevelDestination
 
 @OptIn(
