@@ -1,11 +1,6 @@
 package me.ryyvv.convention
 
 plugins {
-    com.android.application
-
-    id("me.ryyvv.convention.build.android")
-}
-
-android {
-    defaultConfig.targetSdk = compileSdk
+    id("me.ryyvv.convention.build.android.application")
+    id("me.ryyvv.convention.build.androidx.compose")
 }

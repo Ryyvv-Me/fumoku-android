@@ -27,12 +27,6 @@ android {
             )
         }
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.6"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -50,10 +44,6 @@ dependencies {
     androidTestImplementation(libs.androidx.test.espresso.core)
 
     // Compose
-    val composeBom = platform(libs.androidx.compose.bom)
-    implementation(composeBom)
-    androidTestImplementation(composeBom)
-
     implementation(libs.androidx.compose.material3)
 
     // Integration
