@@ -1,5 +1,5 @@
 plugins {
-    id("me.ryyvv.convention.android.application")
+    id("me.ryyvv.convention.app")
 }
 
 object Fumoku {
