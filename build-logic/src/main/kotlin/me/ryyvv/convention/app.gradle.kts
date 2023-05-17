@@ -5,3 +5,7 @@ plugins {
 
     id("me.ryyvv.convention.build.android")
 }
+
+android {
+    defaultConfig.targetSdk = compileSdk
+}
