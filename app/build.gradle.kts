@@ -1,6 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("me.ryyvv.convention.android.application")
 }
 
 object Fumoku {
