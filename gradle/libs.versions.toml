@@ -23,6 +23,10 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidx-navigation-compose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 
+# Convention dependencies
+gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "plugins-android" }
+gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "plugins-kotlin" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "plugins-android" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugins-kotlin" }
