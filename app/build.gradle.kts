@@ -1,6 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("me.ryyvv.convention.app")
 }
 
 object Fumoku {
@@ -8,13 +7,8 @@ object Fumoku {
 }
 
 android {
-    namespace = Fumoku.namespace
-    compileSdk = 33
-
     defaultConfig {
         applicationId = Fumoku.namespace
-        minSdk = 24
-        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -33,19 +27,6 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.6"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -63,10 +44,6 @@ dependencies {
     androidTestImplementation(libs.androidx.test.espresso.core)
 
     // Compose
-    val composeBom = platform(libs.androidx.compose.bom)
-    implementation(composeBom)
-    androidTestImplementation(composeBom)
-
     implementation(libs.androidx.compose.material3)
 
     // Integration
