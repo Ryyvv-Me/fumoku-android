@@ -1,12 +1,9 @@
 plugins {
-    alias(libs.plugins.android.library)
-    id("me.ryyvv.convention.build.android")
-    id("me.ryyvv.convention.build.androidx.compose")
+    id("me.ryyvv.convention.feature")
 }
 
 android {
     dependencies {
-        implementation(libs.androidx.compose.material3)
         implementation(libs.androidx.navigation.compose)
     }
 }
