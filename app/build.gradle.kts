@@ -2,13 +2,9 @@ plugins {
     id("me.ryyvv.convention.app")
 }
 
-object Fumoku {
-    const val namespace = "me.ryyvv.fumoku"
-}
-
 android {
     defaultConfig {
-        applicationId = Fumoku.namespace
+        applicationId = namespace
         versionCode = 1
         versionName = "1.0"
 
