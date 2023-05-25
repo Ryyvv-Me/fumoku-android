@@ -31,13 +31,7 @@ android {
 }
 
 dependencies {
-    // Android Kotlin
     implementation(libs.androidx.core.ktx)
-
-    testImplementation(libs.junit)
-
-    androidTestImplementation(libs.androidx.test.ext.junit.ktx)
-    androidTestImplementation(libs.androidx.test.espresso.core)
 
     // Compose
     implementation(libs.androidx.compose.material3)
@@ -46,7 +40,7 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)
 
-    // Android Studio Preview support
+    // Android Studio Preview
     implementation(libs.androidx.compose.ui.tooling.preview)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
