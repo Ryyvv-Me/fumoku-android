@@ -29,6 +29,7 @@ gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin",
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "plugins-android" }
+android-library = { id = "com.android.library", version.ref = "plugins-android" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugins-kotlin" }
 
 [bundles]
