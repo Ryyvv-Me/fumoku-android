@@ -17,4 +17,7 @@ dependencyResolutionManagement {
 rootProject.name = "fumoku"
 include(":app")
 
-include(":feature:home")
+include(
+    ":feature:home",
+    ":feature:settings",
+)
