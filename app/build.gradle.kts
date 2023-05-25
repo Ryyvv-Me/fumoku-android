@@ -56,4 +56,5 @@ dependencies {
 
     // Projects
     implementation(project(":feature:home"))
+    implementation(project(":feature:settings"))
 }

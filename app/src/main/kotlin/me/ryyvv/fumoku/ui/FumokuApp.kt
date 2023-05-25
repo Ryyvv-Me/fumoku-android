@@ -24,12 +24,11 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navOptions
 import me.ryyvv.fumoku.R
 import me.ryyvv.fumoku.feature.home.navigation.navigateToHome
+import me.ryyvv.fumoku.feature.settings.navigation.navigateToSettings
 import me.ryyvv.fumoku.navigation.FumokuNavHost
-import me.ryyvv.fumoku.navigation.Screen
 import me.ryyvv.fumoku.navigation.TopLevelDestination
 
 @OptIn(
-    ExperimentalMaterial3Api::class,
     ExperimentalLayoutApi::class,
 )
 @Composable
@@ -95,10 +94,8 @@ fun BottomBar(
                             TopLevelDestination.HOME ->
                                 navigateToHome(navOptions)
 
-                            TopLevelDestination.SETTINGS -> navigate(
-                                Screen.Settings.route,
-                                navOptions,
-                            )
+                            TopLevelDestination.SETTINGS ->
+                                navigateToSettings(navOptions)
                         }
                     }
                 },
