@@ -34,19 +34,8 @@ dependencies {
     implementation(libs.androidx.core.ktx)
 
     // Compose
-    implementation(libs.androidx.compose.material3)
-
-    // Integration
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)
-
-    // Android Studio Preview
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    debugImplementation(libs.androidx.compose.ui.tooling)
-
-    // UI Tests
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     // Projects
     implementation(project(":feature:home"))
