@@ -53,4 +53,7 @@ dependencies {
     // UI Tests
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    // Projects
+    implementation(project(":feature:home"))
 }

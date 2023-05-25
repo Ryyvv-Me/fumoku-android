@@ -23,6 +23,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navOptions
 import me.ryyvv.fumoku.R
+import me.ryyvv.fumoku.feature.home.navigation.navigateToHome
 import me.ryyvv.fumoku.navigation.FumokuNavHost
 import me.ryyvv.fumoku.navigation.Screen
 import me.ryyvv.fumoku.navigation.TopLevelDestination
@@ -89,16 +90,16 @@ fun BottomBar(
                         restoreState = true
                     }
 
-                    when (destination) {
-                        TopLevelDestination.HOME -> navHostController.navigate(
-                            Screen.Home.route,
-                            navOptions,
-                        )
+                    with(navHostController) {
+                        when (destination) {
+                            TopLevelDestination.HOME ->
+                                navigateToHome(navOptions)
 
-                        TopLevelDestination.SETTINGS -> navHostController.navigate(
-                            Screen.Settings.route,
-                            navOptions,
-                        )
+                            TopLevelDestination.SETTINGS -> navigate(
+                                Screen.Settings.route,
+                                navOptions,
+                            )
+                        }
                     }
                 },
                 icon = {
