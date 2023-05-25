@@ -4,7 +4,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
-import me.ryyvv.fumoku.R
+import me.ryyvv.fumoku.feature.home.R as homeR
+import me.ryyvv.fumoku.feature.settings.R as settingsR
 
 enum class TopLevelDestination(
     val icon: ImageVector,
@@ -12,10 +13,10 @@ enum class TopLevelDestination(
 ) {
     HOME(
         icon = Icons.Default.Home,
-        textId = R.string.home
+        textId = homeR.string.home
     ),
     SETTINGS(
         icon = Icons.Default.Settings,
-        textId = R.string.settings,
+        textId = settingsR.string.settings,
     ),
 }
