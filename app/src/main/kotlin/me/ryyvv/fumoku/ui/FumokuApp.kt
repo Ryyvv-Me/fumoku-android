@@ -34,13 +34,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
-import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.currentBackStackEntryAsState
-import androidx.navigation.navOptions
 import me.ryyvv.fumoku.R
-import me.ryyvv.fumoku.feature.home.navigation.navigateToHome
-import me.ryyvv.fumoku.feature.settings.navigation.navigateToSettings
 import me.ryyvv.fumoku.navigation.FumokuNavHost
 import me.ryyvv.fumoku.navigation.TopLevelDestination
 
@@ -51,11 +45,13 @@ import me.ryyvv.fumoku.navigation.TopLevelDestination
 fun FumokuApp(
     appState: FumokuAppState = rememberFumokuAppState(),
 ) {
-    val navController = appState.navController
-
     Scaffold(
-        topBar = { TopBar() },
-        bottomBar = { BottomBar(navController) },
+        topBar = { FumokuTopBar() },
+        bottomBar = { FumokuBottomBar(
+            destinations = TopLevelDestination.values().asList(),
+            onNavigateToDestination = appState::navigateToDestination,
+            currentDestination = appState.currentDestination
+        ) },
     ) { innerPadding ->
         Row(
             Modifier
@@ -71,50 +67,25 @@ fun FumokuApp(
 @Preview
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
-fun TopBar() {
+fun FumokuTopBar() {
     TopAppBar(
         title = { Text(stringResource(id = R.string.app_name)) },
     )
 }
 
 @Composable
-fun BottomBar(
-    navHostController: NavHostController,
+fun FumokuBottomBar(
+    destinations: List<TopLevelDestination>,
+    onNavigateToDestination: (TopLevelDestination) -> Unit,
+    currentDestination: NavDestination?,
     modifier: Modifier = Modifier,
 ) {
-    val destinations = TopLevelDestination.values().asList()
-
     NavigationBar(modifier = modifier) {
         destinations.forEach { destination ->
-            val selected = navHostController.currentBackStackEntryAsState().value?.destination
-                .isInHierarchy(destination)
+            val selected = currentDestination.isInHierarchy(destination)
             NavigationBarItem(
                 selected = selected,
-                onClick = {
-                    val navOptions = navOptions {
-                        // Pop up to the start destination of the graph to
-                        // avoid building up a large stack of destinations
-                        // on the back stack as users select items
-                        popUpTo(navHostController.graph.findStartDestination().id) {
-                            saveState = true
-                        }
-                        // Avoid multiple copies of the same destination when
-                        // reselecting the same item
-                        launchSingleTop = true
-                        // Restore state when reselecting a previously selected item
-                        restoreState = true
-                    }
-
-                    with(navHostController) {
-                        when (destination) {
-                            TopLevelDestination.HOME ->
-                                navigateToHome(navOptions)
-
-                            TopLevelDestination.SETTINGS ->
-                                navigateToSettings(navOptions)
-                        }
-                    }
-                },
+                onClick = { onNavigateToDestination(destination) },
                 icon = {
                     Icon(
                         imageVector = destination.icon,

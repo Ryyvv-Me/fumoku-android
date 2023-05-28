@@ -20,9 +20,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.remember
 import androidx.navigation.NavDestination
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navOptions
+import me.ryyvv.fumoku.feature.home.navigation.navigateToHome
+import me.ryyvv.fumoku.feature.settings.navigation.navigateToSettings
+import me.ryyvv.fumoku.navigation.TopLevelDestination
 
 @Composable
 fun rememberFumokuAppState(
@@ -41,7 +46,33 @@ fun rememberFumokuAppState(
 class FumokuAppState(
     val navController: NavHostController,
 ) {
-    val currentNavDestination: NavDestination?
+    val currentDestination: NavDestination?
         @Composable get() = navController
             .currentBackStackEntryAsState().value?.destination
+
+    fun navigateToDestination(topLevelDestination: TopLevelDestination) {
+        val navOptions = navOptions {
+            // Pop up to the start destination of the graph to
+            // avoid building up a large stack of destinations
+            // on the back stack as users select items
+            popUpTo(navController.graph.findStartDestination().id) {
+                saveState = true
+            }
+            // Avoid multiple copies of the same destination when
+            // reselecting the same item
+            launchSingleTop = true
+            // Restore state when reselecting a previously selected item
+            restoreState = true
+        }
+
+        with(navController) {
+            when (topLevelDestination) {
+                TopLevelDestination.HOME ->
+                    navigateToHome(navOptions)
+
+                TopLevelDestination.SETTINGS ->
+                    navigateToSettings(navOptions)
+            }
+        }
+    }
 }
