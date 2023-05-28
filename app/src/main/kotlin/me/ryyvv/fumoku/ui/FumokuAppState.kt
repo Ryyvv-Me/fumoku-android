@@ -26,7 +26,7 @@ import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun rememberFumokuAppState(
-    navController: NavHostController = rememberNavController()
+    navController: NavHostController = rememberNavController(),
 ): FumokuAppState {
     return remember(
         navController,

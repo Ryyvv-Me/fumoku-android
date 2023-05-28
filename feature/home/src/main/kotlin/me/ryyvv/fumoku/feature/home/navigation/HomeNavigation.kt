@@ -27,7 +27,7 @@ const val ROUTE_HOME = "fumoku/home"
 fun NavController.navigateToHome(navOptions: NavOptions? = null) {
     this.navigate(
         ROUTE_HOME,
-        navOptions
+        navOptions,
     )
 }
 

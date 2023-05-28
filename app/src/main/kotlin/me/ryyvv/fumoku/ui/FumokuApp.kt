@@ -49,7 +49,7 @@ import me.ryyvv.fumoku.navigation.TopLevelDestination
 )
 @Composable
 fun FumokuApp(
-    appState: FumokuAppState = rememberFumokuAppState()
+    appState: FumokuAppState = rememberFumokuAppState(),
 ) {
     val navController = appState.navController
 
@@ -61,7 +61,7 @@ fun FumokuApp(
             Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
-                .consumeWindowInsets(innerPadding)
+                .consumeWindowInsets(innerPadding),
         ) {
             FumokuNavHost(appState)
         }

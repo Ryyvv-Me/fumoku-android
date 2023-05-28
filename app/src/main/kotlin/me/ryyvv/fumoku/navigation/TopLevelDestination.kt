@@ -29,7 +29,7 @@ enum class TopLevelDestination(
 ) {
     HOME(
         icon = Icons.Default.Home,
-        textId = homeR.string.home
+        textId = homeR.string.home,
     ),
     SETTINGS(
         icon = Icons.Default.Settings,

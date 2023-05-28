@@ -27,7 +27,7 @@ const val ROUTE_SETTINGS = "fumoku/settings"
 fun NavController.navigateToSettings(navOptions: NavOptions? = null) {
     this.navigate(
         ROUTE_SETTINGS,
-        navOptions
+        navOptions,
     )
 }
 
