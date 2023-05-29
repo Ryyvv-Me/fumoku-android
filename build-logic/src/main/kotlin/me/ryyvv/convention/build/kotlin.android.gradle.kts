@@ -18,17 +18,22 @@ package me.ryyvv.convention.build
 
 import me.ryyvv.convention.build.dsl.android
 import me.ryyvv.convention.build.dsl.kotlinOptions
+import me.ryyvv.convention.build.dsl.libs
 
 plugins {
     org.jetbrains.kotlin.android
 }
 
 android {
+    val javaVersion = JavaVersion.toVersion(
+        libs.versions.java.get()
+    )
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = javaVersion
+        targetCompatibility = javaVersion
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = javaVersion.toString()
     }
 }
