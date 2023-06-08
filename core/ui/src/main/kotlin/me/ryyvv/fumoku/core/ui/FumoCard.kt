@@ -2,6 +2,7 @@ package me.ryyvv.fumoku.core.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import me.ryyvv.fumoku.core.ui.theme.FumokuTheme
 
 @Composable
 fun FumoCard(
@@ -13,6 +14,7 @@ fun FumoCard(
 @Preview
 @Composable
 private fun FumoCardPreview() {
-    // TODO: Add FumokuTheme here
-    FumoCard()
+    FumokuTheme {
+        FumoCard()
+    }
 }

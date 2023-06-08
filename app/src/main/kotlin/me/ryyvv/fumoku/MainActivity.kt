@@ -20,7 +20,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import me.ryyvv.fumoku.ui.FumokuApp
-import me.ryyvv.fumoku.ui.theme.FumokuTheme
+import me.ryyvv.fumoku.core.ui.theme.FumokuTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

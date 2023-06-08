@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.ryyvv.fumoku.ui.theme
+package me.ryyvv.fumoku.core.ui.theme
 
 import android.app.Activity
 import android.os.Build
