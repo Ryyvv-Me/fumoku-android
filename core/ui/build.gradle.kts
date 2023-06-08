@@ -14,30 +14,17 @@
  * limitations under the License.
  */
 
-pluginManagement {
-    includeBuild("build-logic")
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
+plugins {
+    id("me.ryyvv.convention.build.android.library")
+    id("me.ryyvv.convention.build.androidx.compose")
 }
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
+
+android {
+    defaultConfig {
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 }
 
-rootProject.name = "fumoku"
-include(":app")
-
-include(
-    ":core:ui",
-)
-
-include(
-    ":feature:home",
-    ":feature:settings",
-)
+dependencies {
+    implementation(libs.androidx.core.ktx)
+}
