@@ -16,9 +16,10 @@
 
 package me.ryyvv.convention.build
 
+import com.android.build.api.dsl.CommonExtension
 import me.ryyvv.convention.build.dsl.android
-import me.ryyvv.convention.build.dsl.kotlinOptions
 import me.ryyvv.convention.build.dsl.libs
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
 plugins {
     org.jetbrains.kotlin.android
@@ -37,3 +38,6 @@ android {
         jvmTarget = javaVersion.toString()
     }
 }
+
+fun CommonExtension<*, *, *, *, *>.kotlinOptions(block: KotlinJvmOptions.() -> Unit) =
+    (this as ExtensionAware).extensions.configure("kotlinOptions", block)
