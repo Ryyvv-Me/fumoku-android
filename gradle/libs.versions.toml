@@ -1,8 +1,6 @@
 [versions]
-java = "17"
-compose-compiler = "1.4.7"
-
 androidx-core = "1.10.1"
+
 androidx-test-ext-junit = "1.1.5"
 junit = "4.13.2"
 
@@ -10,6 +8,11 @@ androidx-compose-bom = "2023.06.00"
 androidx-activity-compose = "1.7.2"
 androidx-navigation-compose = "2.6.0"
 
+# Modules
+java = "17"
+compose-compiler = "1.4.7"
+
+# Plugins
 plugins-kotlin = "1.8.21"
 plugins-android = "8.2.0-alpha08"
 
@@ -29,7 +32,7 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 
-# Compose supports
+# Compose integrations
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx-activity-compose" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidx-navigation-compose" }
 
