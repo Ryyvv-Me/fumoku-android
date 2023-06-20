@@ -14,16 +14,17 @@
  * limitations under the License.
  */
 
-plugins {
-    `kotlin-dsl`
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+    versionCatalogs {
+        create("libs") {
+            from(files("../libs.versions.toml"))
+        }
+    }
 }
 
-group = "me.ryyvv.convention"
-
-dependencies {
-    // https://github.com/gradle/gradle/issues/15383
-    implementation(files(libs::class.java.superclass.protectionDomain.codeSource.location))
-
-    implementation(libs.gradle.android)
-    implementation(libs.gradle.kotlin)
-}
+rootProject.name = "convention"
