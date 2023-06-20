@@ -24,6 +24,7 @@ androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx-activity-compose" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidx-navigation-compose" }
 
@@ -31,10 +32,14 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "plugins-android" }
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "plugins-kotlin" }
 
+[bundles]
+gradle-convention = [
+    "gradle-android",
+    "gradle-kotlin",
+]
+
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugins-kotlin" }
 
 android-application = { id = "com.android.application", version.ref = "plugins-android" }
 android-library = { id = "com.android.library", version.ref = "plugins-android" }
-
-[bundles]
