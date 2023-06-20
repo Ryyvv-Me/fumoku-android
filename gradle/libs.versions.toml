@@ -13,7 +13,6 @@ java = "17"
 compose-compiler = "1.4.7"
 
 # Plugins
-plugins-kotlin-dsl = "4.0.16"
 plugins-kotlin = "1.8.21"
 plugins-android = "8.2.0-alpha08"
 
@@ -48,8 +47,6 @@ gradle-convention = [
 ]
 
 [plugins]
-kotlin-dsl = { id = "org.gradle.kotlin.kotlin-dsl", version.ref = "plugins-kotlin-dsl" }
-
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugins-kotlin" }
 
 android-application = { id = "com.android.application", version.ref = "plugins-android" }
