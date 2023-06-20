@@ -15,7 +15,7 @@
  */
 
 plugins {
-    `kotlin-dsl`
+    alias(libs.plugins.kotlin.dsl)
 }
 
 group = "me.ryyvv.convention"
