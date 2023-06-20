@@ -1,5 +1,6 @@
 [versions]
 java = "17"
+compose-compiler = "1.4.7"
 
 androidx-core = "1.10.1"
 androidx-test-ext-junit = "1.1.5"
