@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.ryyvv.convention.build
+package me.ryyvv.convention
 
 import gradle.kotlin.dsl.accessors._47545ee4044af277c92cdb30c1d58315.androidTestImplementation
 import gradle.kotlin.dsl.accessors._47545ee4044af277c92cdb30c1d58315.debugImplementation

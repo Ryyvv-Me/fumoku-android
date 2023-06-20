@@ -16,7 +16,7 @@
 
 plugins {
     id("me.ryyvv.convention.android.library")
-    id("me.ryyvv.convention.build.androidx.compose")
+    id("me.ryyvv.convention.androidx.compose")
 }
 
 android {
