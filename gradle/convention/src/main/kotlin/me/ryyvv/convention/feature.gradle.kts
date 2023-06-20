@@ -19,4 +19,6 @@ package me.ryyvv.convention
 plugins {
     id("me.ryyvv.convention.android.library")
     id("me.ryyvv.convention.build.androidx.compose")
+
+    id("me.ryyvv.convention.dependencies.android.test")
 }
