@@ -17,7 +17,6 @@
 package me.ryyvv.convention
 
 import gradle.kotlin.dsl.accessors._47545ee4044af277c92cdb30c1d58315.androidTestImplementation
-import gradle.kotlin.dsl.accessors._47545ee4044af277c92cdb30c1d58315.debugImplementation
 import gradle.kotlin.dsl.accessors._47545ee4044af277c92cdb30c1d58315.implementation
 import me.ryyvv.convention.build.dsl.android
 import me.ryyvv.convention.build.dsl.libs
@@ -30,12 +29,12 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
+}
 
-    dependencies {
-        val composeBom = platform(libs.androidx.compose.bom)
-        implementation(composeBom)
-        androidTestImplementation(composeBom)
+dependencies {
+    val composeBom = platform(libs.androidx.compose.bom)
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
 
-        implementation(libs.androidx.compose.material3)
-    }
+    implementation(libs.androidx.compose.material3)
 }
