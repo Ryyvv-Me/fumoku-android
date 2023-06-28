@@ -4,7 +4,7 @@ androidx-core = "1.10.1"
 androidx-test-ext-junit = "1.1.5"
 junit = "4.13.2"
 
-androidx-compose-bom = "2023.06.00"
+androidx-compose-bom = "2023.06.01"
 androidx-activity-compose = "1.7.2"
 androidx-navigation-compose = "2.6.0"
 
@@ -14,7 +14,7 @@ compose-compiler = "1.4.7"
 
 # Plugins
 plugins-kotlin = "1.8.21"
-plugins-android = "8.2.0-alpha08"
+plugins-android = "8.2.0-alpha10"
 
 [libraries]
 # Android core
