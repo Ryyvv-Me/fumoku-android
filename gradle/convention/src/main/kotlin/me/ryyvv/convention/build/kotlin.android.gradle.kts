@@ -18,6 +18,7 @@ package me.ryyvv.convention.build
 
 import com.android.build.api.dsl.CommonExtension
 import me.ryyvv.convention.build.dsl.android
+import me.ryyvv.convention.build.dsl.javaVersion
 import me.ryyvv.convention.build.dsl.libs
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
@@ -26,16 +27,12 @@ plugins {
 }
 
 android {
-    val javaVersion = JavaVersion.toVersion(
-        libs.versions.java.get()
-    )
-
     compileOptions {
-        sourceCompatibility = javaVersion
-        targetCompatibility = javaVersion
+        sourceCompatibility = libs.versions.javaVersion.get()
+        targetCompatibility = libs.versions.javaVersion.get()
     }
     kotlinOptions {
-        jvmTarget = javaVersion.toString()
+        jvmTarget = libs.versions.javaVersion.get().toString()
     }
 }
 

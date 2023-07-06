@@ -14,14 +14,10 @@
  * limitations under the License.
  */
 
-package me.ryyvv.convention.build
+package me.ryyvv.convention
 
 plugins {
-    com.android.application
+    com.android.library
 
     id("me.ryyvv.convention.build.android")
-}
-
-android {
-    defaultConfig.targetSdk = compileSdk
 }
