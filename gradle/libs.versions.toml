@@ -10,10 +10,10 @@ androidx-navigation-compose = "2.6.0"
 
 # Modules
 java = "17"
-compose-compiler = "1.4.7"
+compose-compiler = "1.4.8"
 
 # Plugins
-plugins-kotlin = "1.8.21"
+plugins-kotlin = "1.8.22"
 plugins-android = "8.2.0-alpha10"
 
 [libraries]
