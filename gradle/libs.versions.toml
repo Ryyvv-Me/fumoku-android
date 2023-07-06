@@ -9,12 +9,10 @@ androidx-activity-compose = "1.7.2"
 androidx-navigation-compose = "2.6.0"
 
 # Modules
+android = "8.2.0-alpha10"
 java = "17"
+kotlin = "1.8.22"
 compose-compiler = "1.4.8"
-
-# Plugins
-plugins-kotlin = "1.8.22"
-plugins-android = "8.2.0-alpha10"
 
 [libraries]
 # Android core
@@ -37,8 +35,8 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidx-navigation-compose" }
 
 # Convention dependencies
-gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "plugins-android" }
-gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "plugins-kotlin" }
+gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "android" }
+gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
 [bundles]
 gradle-convention = [
@@ -47,7 +45,7 @@ gradle-convention = [
 ]
 
 [plugins]
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugins-kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
-android-application = { id = "com.android.application", version.ref = "plugins-android" }
-android-library = { id = "com.android.library", version.ref = "plugins-android" }
+android-application = { id = "com.android.application", version.ref = "android" }
+android-library = { id = "com.android.library", version.ref = "android" }
