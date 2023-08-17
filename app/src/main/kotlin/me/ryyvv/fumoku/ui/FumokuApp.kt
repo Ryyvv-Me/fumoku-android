@@ -47,11 +47,13 @@ fun FumokuApp(
 ) {
     Scaffold(
         topBar = { FumokuTopBar() },
-        bottomBar = { FumokuBottomBar(
-            destinations = TopLevelDestination.values().asList(),
-            onNavigateToDestination = appState::navigateToDestination,
-            currentDestination = appState.currentDestination
-        ) },
+        bottomBar = {
+            FumokuBottomBar(
+                destinations = TopLevelDestination.values().asList(),
+                onNavigateToDestination = appState::navigateToDestination,
+                currentDestination = appState.currentDestination,
+            )
+        },
     ) { innerPadding ->
         Row(
             Modifier

@@ -32,7 +32,7 @@ dependencyResolutionManagement {
 
 // https://docs.gradle.org/8.2-rc-3/userguide/toolchains.html#sub:download_repositories
 plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version("0.4.0")
+    id("org.gradle.toolchains.foojay-resolver-convention") version ("0.4.0")
 }
 
 rootProject.name = "fumoku"
