@@ -25,7 +25,7 @@ plugins {
 
 android {
     namespace = project.autoNamespace
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
