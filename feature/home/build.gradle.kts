@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id("me.ryyvv.convention.feature")
+    id("me.ryyvv.convention.presets.feature")
 }
 
 android {
