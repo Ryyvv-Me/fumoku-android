@@ -39,6 +39,7 @@ rootProject.name = "fumoku"
 include(":app")
 
 include(
+    ":core:model",
     ":core:ui",
 )
 
