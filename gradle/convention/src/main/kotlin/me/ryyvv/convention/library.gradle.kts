@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+package me.ryyvv.convention
+
 plugins {
-    id("me.ryyvv.convention.library")
+    id("me.ryyvv.convention.build.kotlin.jvm")
 }
