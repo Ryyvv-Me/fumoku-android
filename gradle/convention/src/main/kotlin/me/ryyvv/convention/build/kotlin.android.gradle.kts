@@ -44,6 +44,3 @@ kotlin {
         languageVersion.set(libs.versions.javaLanguageVersion)
     }
 }
-
-fun CommonExtension<*, *, *, *, *>.kotlinOptions(block: KotlinJvmOptions.() -> Unit) =
-    (this as ExtensionAware).extensions.configure("kotlinOptions", block)
