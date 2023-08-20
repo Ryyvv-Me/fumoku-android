@@ -16,12 +16,10 @@
 
 package me.ryyvv.convention.build
 
-import com.android.build.api.dsl.CommonExtension
 import me.ryyvv.convention.build.dsl.android
 import me.ryyvv.convention.build.dsl.javaLanguageVersion
 import me.ryyvv.convention.build.dsl.javaVersion
 import me.ryyvv.convention.build.dsl.libs
-import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
