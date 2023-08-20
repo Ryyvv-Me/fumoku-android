@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.AssistChip
@@ -21,6 +22,7 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import me.ryyvv.core.model.Fumo
 import me.ryyvv.fumoku.core.ui.theme.FumokuTheme
 import java.net.URL
@@ -74,7 +76,13 @@ fun FumoCard(
 fun FumoHeaderImage(
     image: URL
 ) {
-    // TODO
+    AsyncImage(
+        model = image.toString(),
+        contentDescription = null,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(360.dp)
+    )
 }
 
 @Preview("FumoCard")
