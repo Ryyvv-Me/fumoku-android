@@ -24,5 +24,5 @@ data class Fumo(
     val type: FumoType,
     val name: String,
     val link: URL,
-    val image: String,
+    val image: URL,
 )
