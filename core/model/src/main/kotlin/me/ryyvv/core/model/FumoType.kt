@@ -21,4 +21,9 @@ enum class FumoType {
     STRAP,
     DEKA,
     PUPPET,
+    ;
+
+    override fun toString(): String {
+        return super.toString().lowercase().replaceFirstChar(Char::titlecase)
+    }
 }
