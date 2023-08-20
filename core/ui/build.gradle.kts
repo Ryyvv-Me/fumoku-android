@@ -28,4 +28,7 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
+
+    // Projects
+    implementation(project(":core:model"))
 }
