@@ -29,8 +29,6 @@ android {
 dependencies {
     implementation(libs.androidx.core.ktx)
 
-    implementation(libs.coil.compose)
-
     // Projects
     implementation(project(":core:model"))
 }
