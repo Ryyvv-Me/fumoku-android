@@ -16,14 +16,11 @@
 
 package me.ryyvv.core.model
 
-enum class FumoType {
-    REGULAR,
-    STRAP,
-    DEKA,
-    PUPPET,
-    ;
-
-    override fun toString(): String {
-        return super.toString().lowercase().replaceFirstChar(Char::titlecase)
-    }
-}
+/**
+ * A data providing user preferences and configurations.
+ */
+data class UserData(
+    val bookmarkedFumos: Set<Int>,
+    val darkThemeConfig: DarkThemeConfig,
+    val useDynamicColor: Boolean,
+)
