@@ -1,24 +1,19 @@
 package me.ryyvv.fumoku.core.ui
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.AssistChip
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalInspectionMode
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
@@ -32,39 +27,45 @@ import java.net.URL
 fun FumoCard(
     fumo: Fumo,
     onClick: () -> Unit,
+    onTypeClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Card(
+    OutlinedCard(
         onClick = onClick,
         modifier = modifier,
     ) {
         Column {
             // Image
             if (fumo.image.isNotEmpty()) {
-                FumoHeaderImage(image = URL(fumo.image))
+                FumoCardImage(image = URL(fumo.image))
             }
 
             Column(
                 modifier = Modifier.padding(16.dp)
             ) {
+                Spacer(modifier = Modifier.height(12.dp))
+
                 // Character
                 Text(
                     text = fumo.character.name,
-                    style = MaterialTheme.typography.headlineMedium,
+                    style = MaterialTheme.typography.displaySmall,
                 )
                 // Name
                 Text(
                     text = fumo.name,
-                    style = MaterialTheme.typography.titleLarge,
+                    style = MaterialTheme.typography.titleSmall,
                 )
 
                 Spacer(modifier = Modifier.height(12.dp))
 
                 // Type
-                AssistChip(
-                    onClick = {},
+                FilterChip(
+                    selected = true,
+                    onClick = onTypeClick,
                     label = {
-                        Text(text = fumo.type.toString())
+                        Text(
+                            text = fumo.type.toString(),
+                        )
                     },
                 )
             }
@@ -73,18 +74,18 @@ fun FumoCard(
 }
 
 @Composable
-fun FumoHeaderImage(
-    image: URL
+fun FumoCardImage(
+    image: URL,
 ) {
     AsyncImage(
         model = image.toString(),
         contentDescription = null,
         modifier = Modifier
             .fillMaxWidth()
-            .height(360.dp)
+            .height(480.dp),
+        contentScale = ContentScale.Crop
     )
 }
-
 @Preview("FumoCard")
 @Composable
 private fun FumoCardPreview(
@@ -96,6 +97,7 @@ private fun FumoCardPreview(
             FumoCard(
                 fumo = fumos[0],
                 onClick = {},
+                onTypeClick = {},
             )
         }
     }
