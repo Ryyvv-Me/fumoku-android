@@ -21,7 +21,7 @@ object PreviewParameterData {
             type = FumoType.REGULAR,
             name = "Version 1",
             link = URL("https://www.gift-gift.jp/nui/nui001.html"),
-            image = "https://fumo.website/img/001.jpg"
+            image = URL("https://fumo.website/img/001.jpg")
         )
     )
 }

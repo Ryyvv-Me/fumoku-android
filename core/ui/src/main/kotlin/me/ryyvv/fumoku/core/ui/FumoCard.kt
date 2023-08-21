@@ -36,9 +36,7 @@ fun FumoCard(
     ) {
         Column {
             // Image
-            if (fumo.image.isNotEmpty()) {
-                FumoCardImage(image = URL(fumo.image))
-            }
+            FumoCardImage(image = fumo.image)
 
             Column(
                 modifier = Modifier.padding(16.dp)
