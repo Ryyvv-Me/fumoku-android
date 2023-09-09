@@ -1,15 +1,14 @@
 [versions]
-# Plugins
 java = "17"
 kotlin = "1.9.10"
+
 android = "8.3.0-alpha03"
 compose-compiler = "1.5.3"
 
-# Libraries
 androidx-core = "1.12.0"
 
-androidx-test-ext-junit = "1.1.5"
 junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
 
 androidx-compose-bom = "2023.09.00"
 androidx-activity-compose = "1.7.2"
@@ -18,14 +17,14 @@ androidx-navigation-compose = "2.7.2"
 coil = "2.4.0"
 
 [libraries]
-# Android core
+# Android
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
 
 # Android test
 androidx-test-ext-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidx-test-ext-junit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 
-# Compose BOM
+# Compose
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -40,7 +39,7 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 # Compose extensions
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
-# Convention dependencies
+# Convention
 gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "android" }
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
