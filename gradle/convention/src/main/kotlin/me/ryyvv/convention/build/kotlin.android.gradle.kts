@@ -34,10 +34,6 @@ android {
 }
 
 kotlin {
-    compilerOptions {
-        languageVersion.set(KotlinVersion.KOTLIN_2_0)
-        apiVersion.set(KotlinVersion.KOTLIN_2_0)
-    }
     jvmToolchain {
         languageVersion.set(libs.versions.javaLanguageVersion)
     }
