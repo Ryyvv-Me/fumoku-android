@@ -20,5 +20,7 @@ plugins {
     id("me.ryyvv.convention.android.library")
     id("me.ryyvv.convention.androidx.compose")
 
+    id("me.ryyvv.convention.hilt.android")
+
     id("me.ryyvv.convention.dependencies.android.test")
 }
