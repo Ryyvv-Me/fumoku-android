@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
@@ -80,8 +81,11 @@ fun FumoCardImage(
         contentDescription = null,
         modifier = Modifier
             .fillMaxWidth()
-            .height(480.dp),
-        contentScale = ContentScale.Crop
+            .heightIn(
+                min = 120.dp,
+                max = 480.dp,
+            ),
+        contentScale = ContentScale.Crop,
     )
 }
 @Preview("FumoCard")
