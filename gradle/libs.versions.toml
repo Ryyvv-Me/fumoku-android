@@ -43,11 +43,13 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 # Convention
 gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "android" }
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-ksp = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 
 [bundles]
 gradle-convention = [
     "gradle-android",
     "gradle-kotlin",
+    "gradle-ksp",
 ]
 
 [plugins]
