@@ -1,6 +1,7 @@
 [versions]
 java = "17"
 kotlin = "1.9.10"
+ksp = "1.9.10-1.0.13"
 
 android = "8.3.0-alpha03"
 compose-compiler = "1.5.3"
@@ -42,16 +43,20 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 # Convention
 gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "android" }
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-ksp = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 
 [bundles]
 gradle-convention = [
     "gradle-android",
     "gradle-kotlin",
+    "gradle-ksp",
 ]
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 android-application = { id = "com.android.application", version.ref = "android" }
 android-library = { id = "com.android.library", version.ref = "android" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
