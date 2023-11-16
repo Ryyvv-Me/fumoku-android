@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+package id.synth.convention
+
 plugins {
-    id("id.synth.convention.library")
+    id("id.synth.convention.build.kotlin.jvm")
 }

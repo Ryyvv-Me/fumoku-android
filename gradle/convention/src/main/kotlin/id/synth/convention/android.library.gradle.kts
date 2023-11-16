@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
+package id.synth.convention
+
 plugins {
-    id("id.synth.convention.library")
+    com.android.library
+
+    id("id.synth.convention.build.android")
 }

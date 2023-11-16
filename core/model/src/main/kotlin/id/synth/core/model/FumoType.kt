@@ -14,6 +14,16 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
+package id.synth.core.model
+
+enum class FumoType {
+    REGULAR,
+    STRAP,
+    DEKA,
+    PUPPET,
+    ;
+
+    override fun toString(): String {
+        return super.toString().lowercase().replaceFirstChar(Char::titlecase)
+    }
 }

@@ -14,6 +14,14 @@
  * limitations under the License.
  */
 
+package id.synth.convention
+
 plugins {
-    id("id.synth.convention.library")
+    com.android.application
+
+    id("id.synth.convention.build.android")
+}
+
+android {
+    defaultConfig.targetSdk = compileSdk
 }

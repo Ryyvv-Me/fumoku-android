@@ -14,6 +14,13 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
-}
+package id.synth.core.model
+
+/**
+ * A data providing user preferences and configurations.
+ */
+data class UserData(
+    val bookmarkedFumos: Set<Int>,
+    val darkThemeConfig: DarkThemeConfig,
+    val useDynamicColor: Boolean,
+)

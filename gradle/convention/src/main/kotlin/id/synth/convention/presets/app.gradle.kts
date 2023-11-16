@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+package id.synth.convention.presets
+
 plugins {
-    id("id.synth.convention.library")
+    id("id.synth.convention.android.application")
+    id("id.synth.convention.androidx.compose")
+
+    id("id.synth.convention.dependencies.android.test")
 }

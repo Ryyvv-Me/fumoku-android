@@ -14,6 +14,25 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
+package id.synth.fumoku.feature.home.navigation
+
+import androidx.navigation.NavController
+import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavOptions
+import androidx.navigation.compose.composable
+import id.synth.fumoku.feature.home.HomeScreen
+
+const val ROUTE_HOME = "fumoku/home"
+
+fun NavController.navigateToHome(navOptions: NavOptions? = null) {
+    this.navigate(
+        ROUTE_HOME,
+        navOptions,
+    )
+}
+
+fun NavGraphBuilder.homeScreen() {
+    composable(ROUTE_HOME) {
+        HomeScreen(ROUTE_HOME)
+    }
 }

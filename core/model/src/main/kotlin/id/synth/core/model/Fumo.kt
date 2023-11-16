@@ -14,6 +14,15 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
-}
+package id.synth.core.model
+
+import java.net.URL
+
+data class Fumo(
+    val id: Int,
+    val character: Character,
+    val type: FumoType,
+    val name: String,
+    val link: URL,
+    val image: URL,
+)

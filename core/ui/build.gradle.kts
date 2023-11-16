@@ -15,9 +15,9 @@
  */
 
 plugins {
-    id("me.ryyvv.convention.android.library")
-    id("me.ryyvv.convention.androidx.compose")
-    id("me.ryyvv.convention.dependencies.androidx.compose.ui.tooling")
+    id("id.synth.convention.android.library")
+    id("id.synth.convention.androidx.compose")
+    id("id.synth.convention.dependencies.androidx.compose.ui.tooling")
 }
 
 android {

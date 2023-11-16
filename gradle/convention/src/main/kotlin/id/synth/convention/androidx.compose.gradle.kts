@@ -14,6 +14,25 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
+package id.synth.convention
+
+import id.synth.convention.build.dsl.android
+import id.synth.convention.build.dsl.libs
+
+android {
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
+}
+
+dependencies {
+    val composeBom = platform(libs.androidx.compose.bom)
+    add("implementation", composeBom)
+    add("androidTestImplementation", composeBom)
+
+    add("implementation", libs.androidx.compose.material3)
 }

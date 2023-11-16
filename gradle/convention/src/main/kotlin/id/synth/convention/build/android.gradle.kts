@@ -14,6 +14,20 @@
  * limitations under the License.
  */
 
+package id.synth.convention.build
+
+import id.synth.convention.build.dsl.android
+import id.synth.convention.build.dsl.autoNamespace
+
 plugins {
-    id("id.synth.convention.library")
+    id("id.synth.convention.build.kotlin.android")
+}
+
+android {
+    namespace = project.autoNamespace
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 24
+    }
 }

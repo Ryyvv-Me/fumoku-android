@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
-}
+package id.synth.core.model
+
+import java.net.URL
+
+data class Character(
+    val name: String,
+    val wiki: URL,
+)

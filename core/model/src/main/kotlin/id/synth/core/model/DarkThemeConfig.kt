@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
+package id.synth.core.model
+
+enum class DarkThemeConfig {
+    FOLLOW_SYSTEM,
+    LIGHT,
+    DARK,
 }

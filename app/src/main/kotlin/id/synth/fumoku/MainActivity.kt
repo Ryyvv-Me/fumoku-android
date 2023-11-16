@@ -14,6 +14,21 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
+package id.synth.fumoku
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import id.synth.fumoku.core.ui.theme.FumokuTheme
+import id.synth.fumoku.ui.FumokuApp
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            FumokuTheme {
+                FumokuApp()
+            }
+        }
+    }
 }

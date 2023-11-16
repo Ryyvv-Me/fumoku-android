@@ -14,6 +14,25 @@
  * limitations under the License.
  */
 
-plugins {
-    id("id.synth.convention.library")
+package id.synth.fumoku.feature.settings.navigation
+
+import androidx.navigation.NavController
+import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavOptions
+import androidx.navigation.compose.composable
+import id.synth.fumoku.feature.settings.SettingsScreen
+
+const val ROUTE_SETTINGS = "fumoku/settings"
+
+fun NavController.navigateToSettings(navOptions: NavOptions? = null) {
+    this.navigate(
+        ROUTE_SETTINGS,
+        navOptions,
+    )
+}
+
+fun NavGraphBuilder.settingsScreen() {
+    composable(ROUTE_SETTINGS) {
+        SettingsScreen(ROUTE_SETTINGS)
+    }
 }

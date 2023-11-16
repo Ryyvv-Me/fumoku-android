@@ -18,7 +18,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "me.ryyvv.convention"
+group = "id.synth.convention"
 
 dependencies {
     // https://github.com/gradle/gradle/issues/15383
