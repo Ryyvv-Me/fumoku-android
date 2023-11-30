@@ -3,8 +3,8 @@ java = "21"
 kotlin = "1.9.20"
 ksp = "1.9.20-1.0.14"
 
-android = "8.3.0-alpha13"
-compose-compiler = "1.5.4"
+android = "8.3.0-alpha15"
+compose-compiler = "1.5.5"
 
 androidx-core = "1.12.0"
 
