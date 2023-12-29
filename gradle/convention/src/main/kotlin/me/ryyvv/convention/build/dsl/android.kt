@@ -25,7 +25,7 @@ import org.gradle.kotlin.dsl.get
  * Used for emulating `android` extension and block in convention plugin.
  */
 
-internal val Project.android: CommonExtension<*, *, *, *, *>
-    get() = this.extensions["android"] as CommonExtension<*, *, *, *, *>
+internal val Project.android: CommonExtension<*, *, *, *, *, *>
+    get() = this.extensions["android"] as CommonExtension<*, *, *, *, *, *>
 
-internal fun Project.android(block: Action<CommonExtension<*, *, *, *, *>>) = block.execute(android)
+internal fun Project.android(block: Action<CommonExtension<*, *, *, *, *, *>>) = block.execute(android)
