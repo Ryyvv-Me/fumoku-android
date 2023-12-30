@@ -23,7 +23,5 @@ enum class FumoType {
     PUPPET,
     ;
 
-    override fun toString(): String {
-        return super.toString().lowercase().replaceFirstChar(Char::titlecase)
-    }
+    override fun toString() = super.toString().lowercase().replaceFirstChar(Char::titlecase)
 }
