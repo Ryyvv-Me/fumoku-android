@@ -37,6 +37,7 @@ plugins {
 
 rootProject.name = "fumoku"
 include(":app")
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 include(
     ":core:model",
