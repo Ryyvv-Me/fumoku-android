@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Ryyvv Assoc.
+ * Copyright 2023 Synth.ID
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
