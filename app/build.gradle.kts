@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Ryyvv Assoc.
+ * Copyright 2023 Synth.ID
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
  */
 
 plugins {
-    id("me.ryyvv.convention.presets.app")
-    id("me.ryyvv.convention.dependencies.androidx.compose.ui.tooling")
+    id("id.synth.convention.presets.app")
+    id("id.synth.convention.dependencies.androidx.compose.ui.tooling")
 }
 
 android {
