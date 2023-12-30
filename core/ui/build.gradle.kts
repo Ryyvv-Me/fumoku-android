@@ -32,5 +32,5 @@ dependencies {
     implementation(libs.coil.compose)
 
     // Projects
-    implementation(project(":core:model"))
+    implementation(projects.core.model)
 }

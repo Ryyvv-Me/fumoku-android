@@ -55,8 +55,8 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
 
     // Projects
-    implementation(project(":core:ui"))
+    implementation(projects.core.ui)
 
-    implementation(project(":feature:home"))
-    implementation(project(":feature:settings"))
+    implementation(projects.feature.home)
+    implementation(projects.feature.settings)
 }
