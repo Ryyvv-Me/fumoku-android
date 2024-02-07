@@ -4,7 +4,7 @@ kotlin = "1.9.22"
 ksp = "1.9.22-1.0.17"
 
 android = "8.3.0-rc01"
-compose-compiler = "1.5.7"
+compose-compiler = "1.5.8"
 
 androidx-core = "1.12.0"
 
