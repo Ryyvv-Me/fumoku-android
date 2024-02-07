@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id("id.synth.convention.presets.feature")
+    id("id.synth.fumoku.convention.presets.feature")
 }
 
 android {

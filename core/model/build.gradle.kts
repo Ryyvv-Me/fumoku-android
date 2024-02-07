@@ -15,5 +15,5 @@
  */
 
 plugins {
-    id("id.synth.convention.library")
+    id("id.synth.fumoku.convention.library")
 }

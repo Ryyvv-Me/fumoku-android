@@ -14,14 +14,15 @@
  * limitations under the License.
  */
 
-package id.synth.convention
+package id.synth.fumoku.convention.build.dsl
 
-plugins {
-    com.android.application
+import org.gradle.accessors.dm.LibrariesForLibs.VersionAccessors
+import org.gradle.api.JavaVersion
+import org.gradle.api.provider.Provider
+import org.gradle.jvm.toolchain.JavaLanguageVersion
 
-    id("id.synth.convention.build.android")
-}
+internal val VersionAccessors.javaVersion: Provider<JavaVersion>
+    get() = this.java.map(JavaVersion::toVersion)
 
-android {
-    defaultConfig.targetSdk = compileSdk
-}
+internal val VersionAccessors.javaLanguageVersion: Provider<JavaLanguageVersion>
+    get() = this.java.map(JavaLanguageVersion::of)

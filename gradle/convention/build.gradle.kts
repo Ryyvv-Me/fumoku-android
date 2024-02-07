@@ -18,7 +18,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "id.synth.convention"
+group = "id.synth.fumoku.convention"
 
 dependencies {
     // https://github.com/gradle/gradle/issues/15383

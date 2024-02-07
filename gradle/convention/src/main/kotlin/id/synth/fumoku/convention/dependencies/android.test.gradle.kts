@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package id.synth.convention.dependencies
+package id.synth.fumoku.convention.dependencies
 
-import id.synth.convention.build.dsl.libs
+import id.synth.fumoku.convention.build.dsl.libs
 
 dependencies {
     add("testImplementation", libs.junit)

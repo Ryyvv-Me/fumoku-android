@@ -14,8 +14,11 @@
  * limitations under the License.
  */
 
-package id.synth.convention
+package id.synth.fumoku.convention.presets
 
 plugins {
-    id("id.synth.convention.build.kotlin.jvm")
+    id("id.synth.fumoku.convention.android.application")
+    id("id.synth.fumoku.convention.androidx.compose")
+
+    id("id.synth.fumoku.convention.dependencies.android.test")
 }

@@ -14,25 +14,17 @@
  * limitations under the License.
  */
 
-package id.synth.convention
+package id.synth.fumoku.convention.build
 
-import id.synth.convention.build.dsl.android
-import id.synth.convention.build.dsl.libs
+import id.synth.fumoku.convention.build.dsl.javaLanguageVersion
+import id.synth.fumoku.convention.build.dsl.libs
 
-android {
-    buildFeatures {
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
-    }
+plugins {
+    org.jetbrains.kotlin.jvm
 }
 
-dependencies {
-    val composeBom = platform(libs.androidx.compose.bom)
-    add("implementation", composeBom)
-    add("androidTestImplementation", composeBom)
-
-    add("implementation", libs.androidx.compose.material3)
+kotlin {
+    jvmToolchain {
+        languageVersion.set(libs.versions.javaLanguageVersion)
+    }
 }

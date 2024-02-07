@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package id.synth.convention.build
+package id.synth.fumoku.convention.build
 
 import com.android.build.api.dsl.CommonExtension
-import id.synth.convention.build.dsl.android
-import id.synth.convention.build.dsl.javaVersion
-import id.synth.convention.build.dsl.libs
+import id.synth.fumoku.convention.build.dsl.android
+import id.synth.fumoku.convention.build.dsl.javaVersion
+import id.synth.fumoku.convention.build.dsl.libs
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
 plugins {

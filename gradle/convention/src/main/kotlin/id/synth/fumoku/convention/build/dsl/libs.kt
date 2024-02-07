@@ -14,20 +14,13 @@
  * limitations under the License.
  */
 
-package id.synth.convention.build
+package id.synth.fumoku.convention.build.dsl
 
-import id.synth.convention.build.dsl.android
-import id.synth.convention.build.dsl.autoNamespace
+import org.gradle.accessors.dm.LibrariesForLibs
+import org.gradle.api.Project
+import org.gradle.kotlin.dsl.getByType
 
-plugins {
-    id("id.synth.convention.build.kotlin.android")
-}
+// https://github.com/gradle/gradle/issues/15383
+internal val Project.libs: LibrariesForLibs
+    get() = this.extensions.getByType()
 
-android {
-    namespace = project.autoNamespace
-    compileSdk = 34
-
-    defaultConfig {
-        minSdk = 24
-    }
-}

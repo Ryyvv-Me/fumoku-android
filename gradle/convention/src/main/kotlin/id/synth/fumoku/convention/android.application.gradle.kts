@@ -14,17 +14,14 @@
  * limitations under the License.
  */
 
-package id.synth.convention.build
-
-import id.synth.convention.build.dsl.javaLanguageVersion
-import id.synth.convention.build.dsl.libs
+package id.synth.fumoku.convention
 
 plugins {
-    org.jetbrains.kotlin.jvm
+    com.android.application
+
+    id("id.synth.fumoku.convention.build.android")
 }
 
-kotlin {
-    jvmToolchain {
-        languageVersion.set(libs.versions.javaLanguageVersion)
-    }
+android {
+    defaultConfig.targetSdk = compileSdk
 }
