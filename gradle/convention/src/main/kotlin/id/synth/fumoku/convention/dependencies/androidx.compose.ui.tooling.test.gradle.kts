@@ -14,17 +14,12 @@
  * limitations under the License.
  */
 
-package id.synth.convention.build.dsl
+package id.synth.fumoku.convention.dependencies
 
-import org.gradle.api.Project
+import id.synth.fumoku.convention.build.dsl.libs
 
-internal val Project.autoNamespace: String
-    get() {
-        val `package` = rootProject.name
-        val subpackage = project
-            .path
-            .removePrefix(":app")
-            .replace(":", ".")
-
-        return "id.synth.$`package`$subpackage"
-    }
+dependencies {
+    // UI Tests
+    add("androidTestImplementation", libs.androidx.compose.ui.test.junit4)
+    add("debugImplementation", libs.androidx.compose.ui.test.manifest)
+}

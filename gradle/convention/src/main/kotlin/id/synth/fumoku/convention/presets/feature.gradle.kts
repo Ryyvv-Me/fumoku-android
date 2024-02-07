@@ -14,18 +14,13 @@
  * limitations under the License.
  */
 
-package id.synth.convention.build.dsl
+package id.synth.fumoku.convention.presets
 
-import com.android.build.api.dsl.CommonExtension
-import org.gradle.api.Action
-import org.gradle.api.Project
-import org.gradle.kotlin.dsl.get
+plugins {
+    id("id.synth.fumoku.convention.android.library")
+    id("id.synth.fumoku.convention.androidx.compose")
 
-/*
- * Used for emulating `android` extension and block in convention plugin.
- */
+    id("id.synth.fumoku.convention.hilt.android")
 
-internal val Project.android: CommonExtension<*, *, *, *, *, *>
-    get() = this.extensions["android"] as CommonExtension<*, *, *, *, *, *>
-
-internal fun Project.android(block: Action<CommonExtension<*, *, *, *, *, *>>) = block.execute(android)
+    id("id.synth.fumoku.convention.dependencies.android.test")
+}

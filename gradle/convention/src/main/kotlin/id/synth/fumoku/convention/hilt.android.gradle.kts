@@ -14,13 +14,17 @@
  * limitations under the License.
  */
 
-package id.synth.convention.presets
+package id.synth.fumoku.convention
+
+import id.synth.fumoku.convention.build.dsl.libs
 
 plugins {
-    id("id.synth.convention.android.library")
-    id("id.synth.convention.androidx.compose")
+    id("id.synth.fumoku.convention.build.ksp")
 
-    id("id.synth.convention.hilt.android")
+    com.google.dagger.hilt.android
+}
 
-    id("id.synth.convention.dependencies.android.test")
+dependencies {
+    add("implementation", libs.hilt.android)
+    add("ksp", libs.hilt.android.compiler)
 }

@@ -14,10 +14,20 @@
  * limitations under the License.
  */
 
-package id.synth.convention
+package id.synth.fumoku.convention.build
+
+import id.synth.fumoku.convention.build.dsl.android
+import id.synth.fumoku.convention.build.dsl.autoNamespace
 
 plugins {
-    com.android.library
+    id("id.synth.fumoku.convention.build.kotlin.android")
+}
 
-    id("id.synth.convention.build.android")
+android {
+    namespace = project.autoNamespace
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 24
+    }
 }

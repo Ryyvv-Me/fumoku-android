@@ -14,17 +14,8 @@
  * limitations under the License.
  */
 
-package id.synth.convention
-
-import id.synth.convention.build.dsl.libs
+package id.synth.fumoku.convention
 
 plugins {
-    id("id.synth.convention.build.ksp")
-
-    com.google.dagger.hilt.android
-}
-
-dependencies {
-    add("implementation", libs.hilt.android)
-    add("ksp", libs.hilt.android.compiler)
+    id("id.synth.fumoku.convention.build.kotlin.jvm")
 }

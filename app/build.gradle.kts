@@ -15,8 +15,8 @@
  */
 
 plugins {
-    id("id.synth.convention.presets.app")
-    id("id.synth.convention.dependencies.androidx.compose.ui.tooling")
+    id("id.synth.fumoku.convention.presets.app")
+    id("id.synth.fumoku.convention.dependencies.androidx.compose.ui.tooling")
 }
 
 android {
